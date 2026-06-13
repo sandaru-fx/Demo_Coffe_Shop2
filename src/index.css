@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --color-brand-orange: #e0742a;
+  --color-cream: #faf6f0;
+  --color-ink: #1c1a17;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base paragraph reading size: 16-18px */
+p {
+  font-size: 1.0625rem; /* 17px */
+  line-height: 1.75;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Small orange subheading: 12-14px, uppercase, tracked */
+.eyebrow {
+  font-size: 0.8125rem; /* 13px */
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-brand-orange);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease both;
+}
