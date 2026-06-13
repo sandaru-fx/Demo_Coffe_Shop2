@@ -6,16 +6,19 @@ const values = [
     title: "Seasonal Sourcing",
     desc: "We partner with local farms and producers, letting the harvest shape our menu week to week.",
     icon: "🌿",
+    image: "/images/dish-appetizer.jpg",
   },
   {
     title: "Considered Craft",
     desc: "Classic technique meets modern plating — every detail is intentional, never fussy.",
     icon: "🔥",
+    image: "/images/dish-signature.jpg",
   },
   {
     title: "Warm Hospitality",
     desc: "Unhurried service in an intimate room. We want every guest to feel genuinely looked after.",
     icon: "✨",
+    image: "/images/cta.jpg",
   },
 ];
 
@@ -68,12 +71,15 @@ export default function About() {
           </div>
           <div className="mt-14 grid gap-8 md:grid-cols-3">
             {values.map((v) => (
-              <div key={v.title} className="rounded-3xl bg-cream p-8 ring-1 ring-black/5">
-                <div className="grid h-14 w-14 place-items-center rounded-2xl bg-brand-orange/10 text-2xl">
-                  {v.icon}
+              <div key={v.title} className="overflow-hidden flex flex-col rounded-3xl bg-cream ring-1 ring-black/5">
+                <img src={v.image} alt={v.title} className="h-48 w-full object-cover" />
+                <div className="p-8 flex-1">
+                  <div className="grid h-14 w-14 place-items-center rounded-2xl bg-brand-orange/10 text-2xl">
+                    {v.icon}
+                  </div>
+                  <h3 className="mt-5 font-display text-2xl font-semibold">{v.title}</h3>
+                  <p className="mt-2 !text-base text-ink/65">{v.desc}</p>
                 </div>
-                <h3 className="mt-5 font-display text-2xl font-semibold">{v.title}</h3>
-                <p className="mt-2 !text-base text-ink/65">{v.desc}</p>
               </div>
             ))}
           </div>
