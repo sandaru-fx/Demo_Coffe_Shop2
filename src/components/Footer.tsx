@@ -1,16 +1,12 @@
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
     <footer className="bg-ink text-cream/80">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-4 lg:px-10">
         <div className="lg:col-span-1">
-          <div className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-full bg-brand-orange text-sm font-bold text-white">
-              M
-            </span>
-            <span className="font-display text-2xl font-semibold text-white">Maison Verde</span>
-          </div>
+          <Logo wordmarkClassName="text-white" subtitleClassName="text-brand-orange" />
           <p className="mt-4 text-sm text-cream/60">
             A polished restaurant experience where seasonal ingredients meet modern craft, served in
             a warm, intimate setting.
@@ -43,13 +39,13 @@ export default function Footer() {
             <li>24 Garden Terrace</li>
             <li>Colombo 07, Sri Lanka</li>
             <li>+94 11 234 5678</li>
-            <li>hello@maisonverde.com</li>
+            <li>hello@skaracoffee.com</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-cream/50 sm:flex-row lg:px-10">
-          <p className="!text-xs">© {new Date().getFullYear()} Maison Verde. All rights reserved.</p>
+          <p className="!text-xs">© {new Date().getFullYear()} SKARA COFFEE. All rights reserved.</p>
           <p className="!text-xs">Crafted with care · Reservations recommended</p>
         </div>
       </div>

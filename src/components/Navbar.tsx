@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import Logo from "./Logo";
 
 const links = [
   { to: "/", label: "Home" },
@@ -36,21 +37,11 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <Link to="/" className="flex items-center gap-2">
-          <span
-            className={`grid h-9 w-9 place-items-center rounded-full text-sm font-bold ${
-              dark ? "bg-brand-orange text-white" : "bg-white/90 text-ink"
-            }`}
-          >
-            M
-          </span>
-          <span
-            className={`font-display text-2xl font-semibold tracking-wide ${
-              dark ? "text-ink" : "text-white"
-            }`}
-          >
-            Maison Verde
-          </span>
+        <Link to="/" aria-label="SKARA COFFEE — home">
+          <Logo
+            wordmarkClassName={dark ? "text-ink" : "text-white"}
+            subtitleClassName={dark ? "text-brand-orange" : "text-brand-orange"}
+          />
         </Link>
 
         {/* Desktop links — 16px bold */}
